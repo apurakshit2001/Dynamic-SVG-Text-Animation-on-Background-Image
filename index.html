@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic SVG Text Animation on Background Image</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             background-color: black;
             min-height: 100vh;
@@ -75,6 +81,8 @@
         .background {
             height: 100vh;
             position: absolute;
+            top: 0;
+            left: 0;
         }
 
         .background img {
