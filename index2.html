@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+        body {
+            font-family: "Great Vibes", cursive;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000000;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        svg {
+            width: 50%;
+            height: auto;
+            position: relative;
+        }
+
+        text {
+            font-size: 350px;
+            fill: transparent;
+            stroke: white;
+            stroke-width: 2px;
+            stroke-dasharray: 600;
+            stroke-dashoffset: 600;
+            animation: TextAnimation 5s ease-in-out forwards;
+        }
+
+        @keyframes TextAnimation {
+            0% {
+                stroke-dashoffset: 600;
+                stroke-dasharray: 600;
+                fill: transparent;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+                stroke-dasharray: 0;
+                fill: white;
+            }
+        }
+
+        .background {
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .background img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            animation: Zoomin 5s ease-in-out 1 forwards;
+        }
+
+        @keyframes Zoomin {
+            0% {
+                transform: scale(1.5);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <img src="./bg.jpg" alt="">
+    </div>
+    <svg viewBox="0 0 1000 500">
+        <text x="50%" y="50%" text-anchor="middle" dy=".35em">Ayan</text>
+    </svg>
+</body>
+
+</html>
